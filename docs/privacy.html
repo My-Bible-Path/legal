@@ -109,7 +109,7 @@
             <div class="app-name">My Bible Path</div>
         </div>
 
-        <p class="effective-date">Effective Date: February 24, 2026</p>
+        <p class="effective-date">Effective Date: March 2, 2026</p>
 
         <p>My Bible Path ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our iOS application.</p>
 
@@ -117,35 +117,37 @@
 
         <p><strong>Account Information.</strong> When you sign in with Apple, we receive a unique user identifier and, if you choose to share it, your name and email address. Apple may provide a private relay email address instead of your real email.</p>
 
-        <p><strong>Usage Data.</strong> We collect anonymous analytics about how you interact with the app, such as journeys viewed and features used. This data does not personally identify you.</p>
+        <p><strong>AI Tutor Conversations.</strong> When you use the AI Tutor feature, your messages are sent to our secure server-side API, which forwards them to OpenAI for processing. We do not permanently store conversation history on our servers. Messages are temporarily processed to deliver responses and are not used for model training by My Bible Path.</p>
 
-        <p><strong>AI Tutor Conversations.</strong> When you use the AI Tutor feature, your messages are sent to a third-party AI service (OpenRouter / underlying model providers) to generate responses. We do not store conversation history on our servers beyond the current session.</p>
+        <p><strong>Reading Progress.</strong> Your reading progress, bookmarks, and highlights are stored locally on your device. If you are signed in, reading progress may be synced to our cloud service to enable continuity.</p>
 
-        <p><strong>Purchase Information.</strong> Subscription purchases are processed entirely by Apple through the App Store. We do not collect or store your payment information.</p>
+        <p><strong>Purchase Information.</strong> Subscription purchases are processed entirely by Apple through the App Store via StoreKit. We do not collect or store your payment information.</p>
 
         <h2>How We Use Your Information</h2>
         <ul>
             <li>To provide and maintain the app's features, including personalized reading progress</li>
             <li>To process AI Tutor requests and deliver responses</li>
             <li>To manage your subscription status</li>
-            <li>To improve the app through anonymous usage analytics</li>
         </ul>
 
+        <h2>Analytics &amp; Tracking</h2>
+        <p>My Bible Path does not collect analytics or tracking data. We do not use any third-party analytics services, ad networks, or tracking SDKs.</p>
+
         <h2>Data Storage &amp; Security</h2>
-        <p>Your reading progress and preferences are stored locally on your device and may be synced via our cloud service (Supabase) to enable cross-device access. We use industry-standard security measures to protect your data in transit and at rest.</p>
+        <p>Your reading progress, preferences, bookmarks, and highlights are stored locally on your device using standard iOS storage. If you are signed in, your profile and reading progress may be synced via our cloud service (Supabase) over encrypted HTTPS connections. Your AI Tutor conversations are processed server-side through a secure Supabase Edge Function — the OpenAI API key is never exposed to the client app.</p>
 
         <h2>Third-Party Services</h2>
         <p>The app integrates with the following third-party services:</p>
         <ul>
             <li><strong>Apple Sign In</strong> — for authentication</li>
-            <li><strong>Supabase</strong> — for cloud data storage and authentication</li>
-            <li><strong>OpenRouter</strong> — for AI Tutor chat functionality</li>
-            <li><strong>RevenueCat</strong> — for subscription management</li>
+            <li><strong>Apple StoreKit</strong> — for subscription and purchase management</li>
+            <li><strong>Supabase</strong> — for cloud data storage, authentication, and server-side API functions</li>
+            <li><strong>OpenAI</strong> — for AI Tutor chat functionality (accessed server-side only via Supabase Edge Function)</li>
         </ul>
         <p>Each service operates under its own privacy policy. We encourage you to review their respective policies.</p>
 
         <h2>Data Retention</h2>
-        <p>We retain your account data for as long as your account is active. You may request deletion of your account and associated data at any time through the app's Profile settings or by contacting us.</p>
+        <p>We retain your account data for as long as your account is active. You may request deletion of your account and associated data at any time through the app's Profile settings or by contacting us. Account deletion removes your profile, tutor conversation threads, and reading progress from our servers.</p>
 
         <h2>Children's Privacy</h2>
         <p>My Bible Path is not directed at children under 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected data from a child under 13, we will take steps to delete it promptly.</p>
@@ -155,8 +157,7 @@
         <ul>
             <li>Access the personal data we hold about you</li>
             <li>Request correction of inaccurate data</li>
-            <li>Request deletion of your account and data</li>
-            <li>Opt out of analytics collection</li>
+            <li>Request deletion of your account and data via the app's Profile settings</li>
         </ul>
 
         <h2>Changes to This Policy</h2>
